@@ -1,24 +1,117 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>日本語入力システム『かんな』</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>日本語入力システム Canna (『かんな』)</title>
 </head>
 <body>
-  <a href="index.html">[English page]</a>
+    <a href="index.html">[English page]</a>
+    <h1 align="center">日本語入力システム Canna (『かんな』)</h1>
+    <h2>概要</h2>
+    <p>Canna (『かんな』)は、UNIX/Linux系OSで動く、クライアント・サーバー型の日本語入力システムです。かな漢字変換エンジン (cannasersver), ユーザーインターフェースエンジン (libcanna), コンソール用のフロントエンドプロセッサ (canuum) が連携して動作することで、登録単語や学習内容を端末1台ごとでなくLAN全体で共通化ことができます。</p>
+    <p>Canna で日本語を入力するには、コンソールで canuum を起動するほかに、X11上でXIMサーバ kinput2 を利用したり、 Canna に直接対応したアプリケーションソフト (パッチを当てた Emacs など) を使う方法があります。</p>
 
-  <h3>概要</h3>
-  Canna はUNIX/Linux向けの日本語入力システムです。
-  かな漢字変換エンジン (cannasersver), ユーザーインターフェースエンジン (libcanna), コンソール用のフロントエンドプロセッサ (canuum) から成ります。
-  Cannaで日本語を入力するには、コンソールで canuum を起動するほかに、X11上でXIMサーバ kinput2 を利用したり、Cannaに直接対応したアプリケーションソフト (パッチを当てた Emacsなど) を使う方法があります。
+    <h2>ダウンロード</h2>
+    最新リリースは<a href="https://github.com/canna-input/canna/releases/release-3.7p4">Canna 3.7p4</a> (2025年06月09日)です。
+    旧バージョンは<a href="https://github.com/canna-input/canna/releases">GitHub のリリースページ</a>にあります。なお、GitHubの開発版は<br>
+    <kbd>git clone https://github.com/canna-input/canna</kbd><br>
+    で取れます。ただし、そのままではreleaseの形にならないので、mkrelease.shを(必要に応じて修正の後)走らせてください。
 
-  <h3>ダウンロード</h3>
-  最新リリースは<a href="https://github.com/canna-input/canna/releases/download/release-3.7p4/Canna37p4.tar.bz2">Canna 3.7p4</a> (2025年06月09日)です。
-  旧バージョンは<a href="https://github.com/canna-input/canna/releases">GitHub のリリースページ</a>にあります。
+    <h2>更新情報</h2>
+    <ul>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.7p4">Canna 3.7p4</a>をリリースしました(2025/06/09)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7p4/CHANGES.jp">こちら</a>を参照願います。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.7p3">Canna 3.7p3</a>をリリースしました(2004/05/20)。FreeBSD, Solaris, AIXなどで3.7p2のmakeに失敗する問題を修正しただけなので、3.7p2を正常にインストールできている場合は3.7p3を入れ直す必要はありません。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.7p2">Canna 3.7p2</a>をリリースしました(2004/05/19)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7p2/CHANGES.jp">こちら</a>を参照願います。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.7p1">Canna 3.7p1</a>をリリースしました(2004/01/02)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7p1/CHANGES.jp">こちら</a>を参照願います。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.7">Canna 3.7</a>をリリースしました(2003/12/12)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7/CHANGES.jp">こちら</a>を参照願います。</li>
+      <li>新ワイドキャラクタAPIにいくつかのソフトを対応させる<a href="https://web.archive.org/web/20230810155823/http://canna.osdn.jp/canna37patches/">パッチ</a>を公開しました。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.6p4">Canna 3.6p4</a>をリリースしました(2003/09/22)。変更点は同梱の<a href="https://github.com/canna-input/canna/blob/release-3.6p4/CHANGES.jp">CHANGES.jp</a>を参照願います。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.6p3">Canna 3.6p3</a>をリリースしました(2003/01/25)。3.6p2の簡単なバグを修正したリリースです。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.6p2">Canna 3.6p2</a>をリリースしました(2003/01/24)。変更点は同梱の<a href="https://github.com/canna-input/canna/blob/release-3.6p2/CHANGES.jp">CHANGES.jp</a>を参照願います。</li>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.6p1">Canna 3.6p1</a>をリリースしました(2002/12/02)。これは<a href="https://web.archive.org/web/20230810155823/http://canna.osdn.jp/sec/Canna-2002-01.txt">セキュリティ</a>修正のみを行ったリリースです。
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.6">Canna 3.6</a>をリリースしました(2002/10/24)。変更点は同梱の<a href="https://github.com/canna-input/canna/blob/release-3.6/CHANGES.jp">CHANGES.jp</a>を参照願います。</li>
+    </ul>
 
-  <h3>開発</h3>
-  GitHub のプロジェクトページは<a href="https://github.com/canna-input/canna">こちら</a>です.
-  1990年代に設計されたソフトなので、このプロジェクトは主にメンテナンスと既存バージョンの配布を目的としており、積極的な開発の予定はありません。
-  パッチやバグ報告などがありましたら<a href="mailto:shinra@j10n.org">こちらにメールを送ってください。</a>
+    <ul>
+    <li>3.7p4での互換性のない変更点<br>
+      Cygwin でDLLのファイル名を標準的なもの (cygcanna-1.dll) に変更しました。
+    </li>
+    <li>3.7p2, 3.7p3での互換性のない変更点<br>
+      特に非互換点は無いはずです。
+    </li>
+    <li>3.7p1での互換性のない変更点<br>
+      Canna.confの実験的なオプションModernElfLinkに関する変更以外、特に非互換点は無いはずです。
+    </li>
+    <li>3.7での互換性のない変更点<br>
+      <ul>
+        <li>バイナリ辞書の形式が変わりました。以前の形式の辞書もマウントできますが、新しく作った辞書は古いサーバではマウントできません。また、mkdic -fqで学習情報を作り直す必要があります。</li>
+        <li>共有ライブラリのバージョンが1.2になりました。SunOSなどでは、旧バージョンでコンパイルしたバイナリは動的リンクに失敗することがあります。バイナリ互換は保たれているはずなので、シンボリックリンクで対処して下さい。</li>
+        <li>ワイドキャラクタAPIを変更しました。現在のところ、コンパイル時に無効にしない限り、古いAPIも利用できますが、できるだけ新しいAPIを利用してください。新ワイドキャラクタにいくつかのソフトを対応させる<a href="https://web.archive.org/web/20230810155823/http://canna.osdn.jp/canna37patches/">パッチ</a>を公開しています。</li>
+        <li>canuumが補助ライブラリ<a href="https://web.archive.org/web/20230810155823/http://www.j10n.org/libspt/">libspt</a>を利用するようになりました。</li>
+        <li>(setq chikuji-continue nil)としておかないと(setq renbun-continue 
+nil)が効かない問題を修正しました。renbun-continueのデフォルト値はnilでしたが、tであるかのように動作していたため、この修正
+に伴いrenbun-continueのデフォルト値をtに改めました。</li>
+        <li>デフォルトのディレクトリ構成が変わりました。特にパッケージを作成する場合には注意してください。</li>
+        <li>sample/*とcmd/crrdic/*を削除しました。いずれも以前から通常のインストールではコンパイルされていなかった古いプログラムです。</li>
+      </ul>
+    </li>
+    <li>3.6p4での互換性のない変更点<br>
+      <ul>
+        <li>インストールされる初期化ファイルのサンプルが変わりました。特にパッケージを作成する場合には注意して下さい。</li>
+      </ul>
+    </li>
+    <li>3.6p2での互換性のない変更点<br>
+      <ul>
+        <li>共有ライブラリのバージョンが1.1に統一されました。SunOSなどでは、旧バージョンでコンパイルしたバイナリは動的リンクに失敗することがあります。バイナリ互換は保たれているはずなので、シンボリックリンクで対処して下さい。</li>
+        <li>mkbindicは同じ読みの単語同士の順番は変えないようになりました。<br>
+      これで優先順位の情報を保ったままバイナリ辞書を作れるようになります。</li>
+      </ul>
+    </li>
+    <li>3.6p1で修正されたセキュリティ問題<br>
+      不正なリクエストを送ることで、バッファオーバーフローの他、内部データの漏洩などを引き起こす問題がありました。
+      <ul>
+        <li><a href="https://web.archive.org/web/20230810155823/http://canna.osdn.jp/sec/Canna-2002-01.txt">Canna-2002-01 multiple vulnerabilities in cannaserver</a></li>
+      </ul>
+    </li>
+    <li>3.6での互換性のない変更点<br>
+      <ul>
+        <li>cannaserverはデフォルトではTCP接続は受け付けないようになりました。<br>
+        TCPでの接続を許可するには、-inetオプションを付けてください。<br>
+        なお、UNIXドメインでの接続の場合、サーバー名はunix[:番号]となります。</li>
+      </ul>
+    </li>
+    <li>3.6で修正されたセキュリティ問題<br>
+      <ul>
+        <li>クライアントから非常に長いユーザー名、グループ名を送られると、バッファオーバーフローする問題がありました。
+        <ul>
+	      <li><a href="https://web.archive.org/web/20230810155823/http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0584">CVE-2000-0584</a></li>
+	      <li><a href="https://web.archive.org/web/20230810155823/http://www.shadowpenguin.org/sc_advisories/advisory038.html">SPS Advisory #38 Canna-cannaserver remote buffer overflow exploit</a></li>
+	    </ul></li>
+	  </ul>
+    </ul>
+
+    <h2>開発</h2>
+    <p>Canna は元々 <a href="https://jpn.nec.com/">NEC</a> で開発されました。それを有志で引き継いで、当初はsouceforge.jp、次いでGitHubを利用して開発を行っています。</p>
+    <p>GitHub のプロジェクトページは<a href="https://github.com/canna-input/canna">こちら</a>です.</p>
+    <p>1990年代に設計されたソフトなので、このプロジェクトは主にメンテナンスと既存バージョンの配布を目的としており、積極的な新機能の開発の予定はありません。パッチやバグ報告などがありましたら<a href="mailto:shinra@j10n.org">こちらにメールを送ってください。</a></p>
+
+    <h3>TODO</h3>
+    <h4>優先的に行うべきもの</h4>
+    <ul>
+      <li>Imake などの古いビルドシステムへの依存をなくす。</li>
+      <li>移植性のない部分、あまりに古い文法で書かれている部分の手直し。</li>
+    </ul>
+    <h4>中程度の優先度のもの</h4>
+    <ul>
+      <li>SourceForge 時代に試みていた文法ファイルの修正などの取り込み。</li>
+      <li>郵便番号辞書の更新。</li>
+    </ul>
+    <h4>優先度小</h4>
+    <ul>
+      <li>JIS X 0213への対応。</li>
+      <li>最低限の認証システムを導入する。</li>
+    </ul>
+    
+    <p>Copyright (c) 2002-2025 Canna Project. All rights reserved.</p>
 </body>
 </html>
