@@ -13,7 +13,7 @@
 
     <h2>ダウンロード</h2>
     最新リリースは<a href="https://github.com/canna-input/canna/releases/release-3.7p4">Canna 3.7p4</a> (2025年06月09日)です。
-    旧バージョンは<a href="https://github.com/canna-input/canna/releases">GitHub のリリースページ</a>にあります。なお、GitHubの開発版は<br>
+    旧バージョンは<a href="https://github.com/canna-input/canna/releases">GitHub のリリースページ</a>にあります。なお、<a href="https://github.com/canna-input/canna">GitHubの開発版</a>は<br>
     <kbd>git clone https://github.com/canna-input/canna</kbd><br>
     で取れます。ただし、そのままではreleaseの形にならないので、mkrelease.shを(必要に応じて修正の後)走らせてください。
 
@@ -91,27 +91,29 @@ nil)が効かない問題を修正しました。renbun-continueのデフォル�
     </ul>
 
     <h2>開発</h2>
-    <p>Canna は元々 <a href="https://jpn.nec.com/">NEC</a> で開発されました。それを有志で引き継いで、当初はsouceforge.jp、次いでGitHubを利用して開発を行っています。</p>
+    <p>Canna は元々 <a href="https://jpn.nec.com/">NEC</a> で開発されました。それを有志で引き継いで、当初はSouceForge.jp、次いでGitHubを利用して開発を行っています。</p>
     <p>GitHub のプロジェクトページは<a href="https://github.com/canna-input/canna">こちら</a>です.</p>
-    <p>1990年代に設計されたソフトなので、このプロジェクトは主にメンテナンスと既存バージョンの配布を目的としており、積極的な新機能の開発の予定はありません。パッチやバグ報告などがありましたら<a href="mailto:shinra@j10n.org">こちらにメールを送ってください。</a></p>
+    <p>1990年代に設計されたソフトなので、このプロジェクトは主にメンテナンスと既存バージョンの配布を目的としており、積極的な新機能の開発の予定はありません。パッチやバグ報告などがありましたら、<a href="https://github.com/canna-input/canna/issues">GitHubのIssues</a>に登録するか、<a href="mailto:shinra@j10n.org">こちらにメールを送ってください。</a></p>
 
     <h3>TODO</h3>
-    <h4>優先的に行うべきもの</h4>
     <ul>
-      <li>Imake などの古いビルドシステムへの依存をなくす。</li>
-      <li>移植性のない部分、あまりに古い文法で書かれている部分の手直し。</li>
+      <li>優先的に行うべきもの
+        <ul>
+          <li>Imake などの古いビルドシステムへの依存をなくす。</li>
+          <li>移植性のない部分、あまりに古い文法で書かれている部分の手直し。</li>
+        </ul></li>
+      <li>中程度の優先度のもの
+        <ul>
+          <li>SourceForge 時代に試みていた文法ファイルの修正などの取り込み。</li>
+          <li>郵便番号辞書の更新。</li>
+        </ul></li>
+      <li>優先度小
+        <ul>
+          <li>JIS X 0213への対応。</li>
+          <li>最低限の認証システムを導入する。</li>
+        </ul></li>
     </ul>
-    <h4>中程度の優先度のもの</h4>
-    <ul>
-      <li>SourceForge 時代に試みていた文法ファイルの修正などの取り込み。</li>
-      <li>郵便番号辞書の更新。</li>
-    </ul>
-    <h4>優先度小</h4>
-    <ul>
-      <li>JIS X 0213への対応。</li>
-      <li>最低限の認証システムを導入する。</li>
-    </ul>
-    
+
     <p>Copyright (c) 2002-2025 Canna Project. All rights reserved.</p>
 </body>
 </html>
