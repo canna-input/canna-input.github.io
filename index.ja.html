@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,13 +12,14 @@
     <p>Canna で日本語を入力するには、コンソールで canuum を起動するほかに、X11上でXIMサーバ kinput2 を利用したり、 Canna に直接対応したアプリケーションソフト (パッチを当てた Emacs など) を使う方法があります。</p>
 
     <h2>ダウンロード</h2>
-    最新リリースは<a href="https://github.com/canna-input/canna/releases/release-3.7p4">Canna 3.7p4</a> (2025年06月09日)です。
+    最新リリースは<a href="https://github.com/canna-input/canna/releases/release-3.7p4">Canna 3.7p5</a> (2025年08月15日)です。
     旧バージョンは<a href="https://github.com/canna-input/canna/releases">GitHub のリリースページ</a>にあります。なお、<a href="https://github.com/canna-input/canna">GitHubの開発版</a>は<br>
     <kbd>git clone https://github.com/canna-input/canna</kbd><br>
     で取れます。ただし、そのままではreleaseの形にならないので、mkrelease.shを(必要に応じて修正の後)走らせてください。
 
     <h2>更新情報</h2>
     <ul>
+      <li><a href="https://github.com/canna-input/canna/releases/release-3.7p5">Canna 3.7p5</a>をリリースしました(2025/08/15)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7p5/CHANGES.jp">こちら</a>を参照願います。</li>
       <li><a href="https://github.com/canna-input/canna/releases/release-3.7p4">Canna 3.7p4</a>をリリースしました(2025/06/09)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7p4/CHANGES.jp">こちら</a>を参照願います。</li>
       <li><a href="https://github.com/canna-input/canna/releases/release-3.7p3">Canna 3.7p3</a>をリリースしました(2004/05/20)。FreeBSD, Solaris, AIXなどで3.7p2のmakeに失敗する問題を修正しただけなので、3.7p2を正常にインストールできている場合は3.7p3を入れ直す必要はありません。</li>
       <li><a href="https://github.com/canna-input/canna/releases/release-3.7p2">Canna 3.7p2</a>をリリースしました(2004/05/19)。変更点は<a href="https://github.com/canna-input/canna/blob/release-3.7p2/CHANGES.jp">こちら</a>を参照願います。</li>
@@ -33,16 +34,28 @@
     </ul>
 
     <ul>
-    <li>3.7p4での互換性のない変更点<br>
-      Cygwin でDLLのファイル名を標準的なもの (cygcanna-1.dll) に変更しました。
+    <li>3.7p5での互換性のない変更点<br>
+      <ul>
+        <li>3.7p3までと同様に静的ライブラリを構築するようにした以外、特に非互換点は無いはずです。</li>
+      </ul>
     </li>
-    <li>3.7p2, 3.7p3での互換性のない変更点<br>
-      特に非互換点は無いはずです。
+    <li>3.7p4での互換性のない変更点
+      <ul>
+        <li>Cygwin でDLLのファイル名を標準的なもの (cygcanna-1.dll) に変更しました。</li>
+        <li>誤って静的ライブラリが構築されなくなってしまいました。(3.7p5で修正)</li>
+      </ul>
     </li>
-    <li>3.7p1での互換性のない変更点<br>
-      Canna.confの実験的なオプションModernElfLinkに関する変更以外、特に非互換点は無いはずです。
+    <li>3.7p2, 3.7p3での互換性のない変更点
+      <ul>
+        <li>特に非互換点は無いはずです。</li>
+      </ul>
     </li>
-    <li>3.7での互換性のない変更点<br>
+    <li>3.7p1での互換性のない変更点
+      <ul>
+        <li>Canna.confの実験的なオプションModernElfLinkに関する変更以外、特に非互換点は無いはずです。</li>
+      </ul>
+    </li>
+    <li>3.7での互換性のない変更点
       <ul>
         <li>バイナリ辞書の形式が変わりました。以前の形式の辞書もマウントできますが、新しく作った辞書は古いサーバではマウントできません。また、mkdic -fqで学習情報を作り直す必要があります。</li>
         <li>共有ライブラリのバージョンが1.2になりました。SunOSなどでは、旧バージョンでコンパイルしたバイナリは動的リンクに失敗することがあります。バイナリ互換は保たれているはずなので、シンボリックリンクで対処して下さい。</li>
@@ -55,32 +68,32 @@ nil)が効かない問題を修正しました。renbun-continueのデフォル�
         <li>sample/*とcmd/crrdic/*を削除しました。いずれも以前から通常のインストールではコンパイルされていなかった古いプログラムです。</li>
       </ul>
     </li>
-    <li>3.6p4での互換性のない変更点<br>
+    <li>3.6p4での互換性のない変更点
       <ul>
         <li>インストールされる初期化ファイルのサンプルが変わりました。特にパッケージを作成する場合には注意して下さい。</li>
       </ul>
     </li>
-    <li>3.6p2での互換性のない変更点<br>
+    <li>3.6p2での互換性のない変更点
       <ul>
         <li>共有ライブラリのバージョンが1.1に統一されました。SunOSなどでは、旧バージョンでコンパイルしたバイナリは動的リンクに失敗することがあります。バイナリ互換は保たれているはずなので、シンボリックリンクで対処して下さい。</li>
         <li>mkbindicは同じ読みの単語同士の順番は変えないようになりました。<br>
       これで優先順位の情報を保ったままバイナリ辞書を作れるようになります。</li>
       </ul>
     </li>
-    <li>3.6p1で修正されたセキュリティ問題<br>
+    <li>3.6p1で修正されたセキュリティ問題
       不正なリクエストを送ることで、バッファオーバーフローの他、内部データの漏洩などを引き起こす問題がありました。
       <ul>
         <li><a href="https://web.archive.org/web/20230810155823/http://canna.osdn.jp/sec/Canna-2002-01.txt">Canna-2002-01 multiple vulnerabilities in cannaserver</a></li>
       </ul>
     </li>
-    <li>3.6での互換性のない変更点<br>
+    <li>3.6での互換性のない変更点
       <ul>
         <li>cannaserverはデフォルトではTCP接続は受け付けないようになりました。<br>
         TCPでの接続を許可するには、-inetオプションを付けてください。<br>
         なお、UNIXドメインでの接続の場合、サーバー名はunix[:番号]となります。</li>
       </ul>
     </li>
-    <li>3.6で修正されたセキュリティ問題<br>
+    <li>3.6で修正されたセキュリティ問題
       <ul>
         <li>クライアントから非常に長いユーザー名、グループ名を送られると、バッファオーバーフローする問題がありました。
         <ul>
